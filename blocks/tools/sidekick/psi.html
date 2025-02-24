@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PSI redirect</title>
+    </head>
+    <body>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const referrer = params.get('referrer');
+            if (referrer) {
+                const psiURL = `https://pagespeed.web.dev/report?url=${referrer}`;
+                window.location = psiURL;
+            } else {
+                document.body.append('no referrer passed');
+            }
+        </script>
+    </body>
+</html>
