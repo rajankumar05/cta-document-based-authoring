@@ -10,3 +10,4 @@ export async function addCookieBanner() {
 </div>`;
   document.querySelector('main').append(cookieBanner);
 }
+addCookieBanner();
