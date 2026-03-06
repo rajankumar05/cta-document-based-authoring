@@ -5,8 +5,7 @@ import { loadScript } from './aem.js';
 export async function addCookieBanner() {
   const cookieBanner = document.createElement('div');
   cookieBanner.classList.add('cookie-banner');
-  cookieBanner.innerHTML = `<
-  <div id="teconsent"></div>
+  cookieBanner.innerHTML = `<div id="teconsent"></div>
 </div>`;
   document.querySelector('main').append(cookieBanner);
 }
